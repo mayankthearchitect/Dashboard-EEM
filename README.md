@@ -1,4 +1,4 @@
-Dashboard-EEM (Energy Efficiency Measures)
+# Dashboard-EEM (Energy Efficiency Measures)
 A comprehensive dashboard for tracking and visualizing Energy Efficiency Measures (EEM) with interactive charts and real-time analytics. Built with vanilla JavaScript and Chart.js for optimal performance and easy deployment.
 🌟 Features
 
