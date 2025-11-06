@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a;
+            background-color: #ffffff;
             padding: 40px 20px;
         }
 
@@ -27,7 +27,7 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 40px;
-            color: #ffffff;
+            color: #2c3e50;
             letter-spacing: -0.5px;
         }
 
@@ -45,29 +45,29 @@
         }
 
         .metric-card {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 100%);
+            background: #f8f9fa;
             border-radius: 15px;
             padding: 25px 20px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(30, 58, 95, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            border: 1px solid rgba(74, 144, 226, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .metric-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(74, 144, 226, 0.5), 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: rgba(74, 144, 226, 0.4);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 0, 0, 0.1);
         }
 
         .metric-value {
             font-size: 2.5rem;
             font-weight: 800;
-            color: #E8F4FF;
+            color: #2c3e50;
             line-height: 1;
             margin-bottom: 10px;
             transition: all 0.3s ease;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
         }
 
         .metric-value.updated {
@@ -77,73 +77,61 @@
         .metric-label {
             font-size: 0.9rem;
             font-weight: 600;
-            color: #B8D4F0;
+            color: #5a6c7d;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .metric-unit {
             font-size: 0.8rem;
-            color: #7BA3CC;
+            color: #7d8a96;
             margin-top: 5px;
         }
 
         /* Color-coded metric cards matching chart legend */
         .metric-total {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8a 100%);
+            background: linear-gradient(135deg, #A8D8FF 0%, #64B5F6 100%);
+            border: 1px solid rgba(33, 150, 243, 0.4);
+        }
+
+        .metric-total:hover {
+            border-color: rgba(33, 150, 243, 0.6);
         }
 
         .metric-equipment {
-            background: linear-gradient(135deg, #5a5a5a 0%, #808080 100%);
-            border: 1px solid rgba(128, 128, 128, 0.3);
+            background: linear-gradient(135deg, #DBDBDB 0%, #BEBEBE 100%);
+            border: 1px solid rgba(168, 168, 168, 0.4);
         }
 
         .metric-equipment:hover {
-            box-shadow: 0 12px 30px rgba(128, 128, 128, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: rgba(128, 128, 128, 0.5);
+            border-color: rgba(168, 168, 168, 0.6);
         }
 
         .metric-lighting {
-            background: linear-gradient(135deg, #b8950a 0%, #FFD700 100%);
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            background: linear-gradient(135deg, #FFF1B8 0%, #FFE680 100%);
+            border: 1px solid rgba(255, 217, 61, 0.4);
         }
 
         .metric-lighting:hover {
-            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: rgba(255, 215, 0, 0.5);
-        }
-
-        .metric-lighting .metric-value {
-            color: #1a1a1a;
-            text-shadow:
-                0 0 20px rgba(255, 255, 255, 0.6),
-                0 0 40px rgba(255, 255, 255, 0.3),
-                0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .metric-lighting .metric-label,
-        .metric-lighting .metric-unit {
-            color: #1a1a1a;
+            border-color: rgba(255, 217, 61, 0.6);
         }
 
         .metric-heating {
-            background: linear-gradient(135deg, #a0111f 0%, #DC143C 100%);
-            border: 1px solid rgba(220, 20, 60, 0.3);
+            background: linear-gradient(135deg, #FFD4D8 0%, #FFB3BC 100%);
+            border: 1px solid rgba(255, 107, 122, 0.4);
         }
 
         .metric-heating:hover {
-            box-shadow: 0 12px 30px rgba(220, 20, 60, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: rgba(220, 20, 60, 0.5);
+            border-color: rgba(255, 107, 122, 0.6);
         }
 
         .metric-cooling {
-            background: linear-gradient(135deg, #325f85 0%, #4682B4 100%);
-            border: 1px solid rgba(70, 130, 180, 0.3);
+            background: linear-gradient(135deg, #D9EBFA 0%, #B8D9F7 100%);
+            border: 1px solid rgba(108, 180, 238, 0.4);
         }
 
         .metric-cooling:hover {
-            box-shadow: 0 12px 30px rgba(70, 130, 180, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4);
-            border-color: rgba(70, 130, 180, 0.5);
+            border-color: rgba(108, 180, 238, 0.6);
         }
 
         .chart-container {
@@ -154,12 +142,13 @@
         }
 
         .chart-inner {
-            background-color: #2a2a2a;
+            background-color: #f8f9fa;
             padding: 30px;
             padding-top: 50px;
             border-radius: 10px;
             position: relative;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             height: 580px;
             display: flex;
             align-items: center;
@@ -167,11 +156,12 @@
 
         .savings-card {
             width: 280px;
-            background-color: #2a2a2a;
+            background-color: #f8f9fa;
             border-radius: 20px;
             padding: 30px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
             flex-shrink: 0;
             position: relative;
             overflow: hidden;
@@ -186,10 +176,10 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+            background: linear-gradient(180deg, #5DD88A 0%, #26DE81 100%);
             transition: height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
             z-index: 1;
-            box-shadow: 0 -4px 20px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 -2px 10px rgba(38, 222, 129, 0.4);
         }
 
         .savings-content {
@@ -200,25 +190,18 @@
         .savings-value {
             font-size: 6rem;
             font-weight: 800;
-            color: #ffffff;
+            color: #2c3e50;
             line-height: 1;
             margin-bottom: 15px;
-            text-shadow:
-                0 0 20px rgba(255, 255, 255, 0.8),
-                0 0 40px rgba(255, 255, 255, 0.5),
-                0 0 60px rgba(255, 255, 255, 0.3),
-                0 4px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: none;
         }
 
         .savings-label {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #ffffff;
+            color: #2c3e50;
             letter-spacing: 1px;
-            text-shadow:
-                0 0 10px rgba(255, 255, 255, 0.6),
-                0 0 20px rgba(255, 255, 255, 0.3),
-                0 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: none;
         }
 
         canvas {
@@ -229,14 +212,15 @@
         .controls {
             margin-top: 30px;
             padding: 20px;
-            background-color: #2a2a2a;
+            background-color: #f8f9fa;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .controls h3 {
             margin-bottom: 15px;
-            color: #ffffff;
+            color: #2c3e50;
         }
 
         .control-group {
@@ -247,17 +231,17 @@
             display: block;
             margin-bottom: 5px;
             font-weight: 600;
-            color: #cccccc;
+            color: #5a6c7d;
         }
 
         input[type="file"] {
             width: 100%;
             padding: 10px;
-            border: 2px solid #444;
+            border: 2px solid #dee2e6;
             border-radius: 5px;
             font-size: 14px;
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #2c3e50;
         }
 
         input[type="file"]::file-selector-button {
@@ -324,14 +308,15 @@
         .eem-selector {
             margin-top: 30px;
             padding: 20px;
-            background-color: #2a2a2a;
+            background-color: #f8f9fa;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.06);
         }
 
         .eem-selector h3 {
             margin-bottom: 20px;
-            color: #ffffff;
+            color: #2c3e50;
         }
 
         .eem-options {
@@ -342,28 +327,30 @@
 
         .eem-option {
             padding: 15px 20px;
-            background-color: #1a1a1a;
-            border: none;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.08);
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            color: #ffffff;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+            color: #2c3e50;
         }
 
         .eem-option:hover {
-            background-color: #333333;
-            box-shadow: 0 6px 16px rgba(74, 144, 226, 0.5);
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-color: rgba(74, 144, 226, 0.3);
         }
 
         .eem-option.selected {
-            background: linear-gradient(135deg, #FFB86C 0%, #FFA64D 100%);
-            color: #1a1a1a;
+            background: linear-gradient(135deg, #FFB84D 0%, #FF9800 100%);
+            color: #2c3e50;
             font-weight: 600;
-            box-shadow: 0 8px 20px rgba(255, 168, 77, 0.6);
+            box-shadow: 0 3px 12px rgba(255, 152, 0, 0.5);
+            border-color: rgba(255, 152, 0, 0.6);
         }
 
         .eem-option-name {
@@ -379,16 +366,7 @@
         }
 
         .eem-option.selected .eem-option-savings {
-            color: #1a1a1a;
-        }
-
-        .savings-value {
-            font-size: 5rem;
-            font-weight: 800;
-            color: #1a1a1a;
-            line-height: 1;
-            margin-bottom: 10px;
-            transition: all 0.3s ease;
+            color: #2c3e50;
         }
 
         .savings-value.updated {
@@ -585,17 +563,17 @@
         let currentData = null;
         let selectedEEMIndex = null;
 
-        // Color scheme matching the image
+        // Vibrant colors that pop
         const colors = {
-            equipment: '#808080',
-            lighting: '#FFD700',
-            heating: '#DC143C',
-            cooling: '#4682B4',
-            heatRejection: '#228B22',
-            fans: '#20B2AA',
-            pumps: '#8A2BE2',
-            dhw: '#4169E1',
-            humidification: '#2F4F4F'
+            equipment: '#A8A8A8',      // More saturated gray
+            lighting: '#FFD93D',       // Vibrant yellow
+            heating: '#FF6B7A',        // Vibrant coral/pink
+            cooling: '#6CB4EE',        // Vibrant sky blue
+            heatRejection: '#4ECDC4',  // Vibrant turquoise/mint
+            fans: '#45B7D1',           // Vibrant cyan
+            pumps: '#A78BFA',          // Vibrant purple
+            dhw: '#5DADE2',            // Vibrant blue
+            humidification: '#7FBC8C'  // Vibrant green
         };
 
         // Sample data based on the image
@@ -662,7 +640,7 @@
                                 weight: 'bold'
                             },
                             padding: 20,
-                            color: '#ffffff'
+                            color: '#2c3e50'
                         },
                         legend: {
                             display: true,
@@ -673,7 +651,7 @@
                                 font: {
                                     size: 11
                                 },
-                                color: '#ffffff'
+                                color: '#2c3e50'
                             }
                         },
                         tooltip: {
@@ -704,10 +682,10 @@
                                 maxRotation: 0,
                                 minRotation: 0,
                                 autoSkip: false,
-                                color: '#cccccc'
+                                color: '#5a6c7d'
                             },
                             grid: {
-                                color: '#444444'
+                                color: '#e0e0e0'
                             }
                         },
                         y: {
@@ -720,17 +698,17 @@
                                     size: 12,
                                     weight: 'bold'
                                 },
-                                color: '#ffffff'
+                                color: '#2c3e50'
                             },
                             ticks: {
                                 callback: function(value) {
                                     return value;
                                 },
-                                color: '#cccccc'
+                                color: '#5a6c7d'
                             },
                             grace: '10%',
                             grid: {
-                                color: '#444444'
+                                color: '#e0e0e0'
                             }
                         }
                     },
@@ -749,7 +727,7 @@
                                 const x = bar.x;
                                 const y = bar.y - 15;
 
-                                ctx.fillStyle = '#ffffff';
+                                ctx.fillStyle = '#2c3e50';
                                 ctx.font = 'bold 12px Arial';
                                 ctx.textAlign = 'center';
                                 ctx.fillText(data.percentages[index] + '%', x, y);
