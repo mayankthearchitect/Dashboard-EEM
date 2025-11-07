@@ -397,11 +397,23 @@
             border-radius: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
-            text-align: center;
+            text-align: left;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
             color: #2c3e50;
+        }
+
+        .description-title {
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .description-note {
+            font-size: 12px;
+            font-weight: 400;
+            color: #5a6c7d;
+            line-height: 1.4;
         }
 
         .description-option:hover {
@@ -412,10 +424,18 @@
 
         .description-option.selected {
             background: linear-gradient(135deg, #FFB84D 0%, #FF9800 100%);
-            color: #2c3e50;
-            font-weight: 600;
             box-shadow: 0 3px 12px rgba(255, 152, 0, 0.5);
             border-color: rgba(255, 152, 0, 0.6);
+        }
+
+        .description-option.selected .description-title {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .description-option.selected .description-note {
+            color: #2c3e50;
+            font-weight: 500;
         }
 
         .savings-value.updated {
@@ -530,7 +550,14 @@
 
             .description-option {
                 padding: 12px 15px;
+            }
+
+            .description-title {
                 font-size: 13px;
+            }
+
+            .description-note {
+                font-size: 11px;
             }
         }
 
@@ -563,8 +590,12 @@
                 font-size: 16px;
             }
 
-            .description-option {
+            .description-title {
                 font-size: 12px;
+            }
+
+            .description-note {
+                font-size: 10px;
             }
         }
     </style>
@@ -673,13 +704,34 @@
             ],
             percentages: [0, 4, 7, 13, 18, 27, 37],
             descriptions: [
-                'Baseline - LEED',
-                'EEM1-High performance building envelope',
-                'EEM2-LPD reduction',
-                'EEM3-DV for patient room',
-                'EEM4-OR DOAS system',
-                'EEM5-HRC',
-                'EEM6: 2-pipe air source heat pump'
+                {
+                    title: 'Baseline - LEED',
+                    note: ''
+                },
+                {
+                    title: 'High performance building envelope',
+                    note: 'Window u-value of 0.38, solar heat gain coefficient (SHGC) of 0.23'
+                },
+                {
+                    title: 'High performance lighting system',
+                    note: 'Building-level lighting power density (LPD) of 0.7 W/ft²'
+                },
+                {
+                    title: 'DV for patient room',
+                    note: 'Displacement ventilation for patient room'
+                },
+                {
+                    title: 'OR DOAS system',
+                    note: 'Dedicated outdoor air unit + air handling unit for operating rooms'
+                },
+                {
+                    title: 'Heat recovery chiller or 4 pipe HR heat pumps',
+                    note: '120 tons of HR chiller or 4 pipe HR heat pump'
+                },
+                {
+                    title: '2-pipe air source heat pump',
+                    note: 'Air source heat pump for space heating (full electrification)'
+                }
             ]
         };
 
@@ -863,7 +915,20 @@
                 const option = document.createElement('div');
                 option.className = 'description-option';
                 option.onclick = () => selectEEM(index);
-                option.textContent = description;
+
+                const titleDiv = document.createElement('div');
+                titleDiv.className = 'description-title';
+                titleDiv.textContent = description.title;
+
+                option.appendChild(titleDiv);
+
+                if (description.note) {
+                    const noteDiv = document.createElement('div');
+                    noteDiv.className = 'description-note';
+                    noteDiv.textContent = description.note;
+                    option.appendChild(noteDiv);
+                }
+
                 container.appendChild(option);
             });
         }
