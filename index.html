@@ -321,12 +321,12 @@
 
         .eem-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 12px;
         }
 
         .eem-option {
-            padding: 15px 20px;
+            padding: 12px 15px;
             background-color: #ffffff;
             border: 1px solid rgba(0, 0, 0, 0.08);
             border-radius: 10px;
@@ -337,6 +337,7 @@
             align-items: center;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
             color: #2c3e50;
+            min-width: 0;
         }
 
         .eem-option:hover {
@@ -355,14 +356,19 @@
 
         .eem-option-name {
             flex: 1;
-            font-size: 14px;
+            font-size: 13px;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .eem-option-savings {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
             color: #4A90E2;
-            margin-left: 15px;
+            margin-left: 8px;
+            flex-shrink: 0;
         }
 
         .eem-option.selected .eem-option-savings {
@@ -386,12 +392,12 @@
 
         .description-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 12px;
         }
 
         .description-option {
-            padding: 15px 20px;
+            padding: 12px 15px;
             background-color: #ffffff;
             border: 2px solid rgba(0, 0, 0, 0.08);
             border-radius: 10px;
@@ -400,20 +406,22 @@
             text-align: left;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
             color: #2c3e50;
+            min-width: 0;
         }
 
         .description-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: #2c3e50;
+            line-height: 1.3;
         }
 
         .description-note {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 400;
             color: #5a6c7d;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .description-option:hover {
@@ -468,6 +476,14 @@
 
             canvas {
                 max-height: 400px;
+            }
+
+            .eem-options {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .description-options {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
@@ -531,12 +547,20 @@
             }
 
             .eem-options {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
 
             .eem-option {
-                padding: 12px 15px;
+                padding: 10px 12px;
+            }
+
+            .eem-option-name {
+                font-size: 12px;
+            }
+
+            .eem-option-savings {
+                font-size: 14px;
             }
 
             .eem-descriptions {
@@ -544,7 +568,7 @@
             }
 
             .description-options {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
             }
 
@@ -553,11 +577,11 @@
             }
 
             .description-title {
-                font-size: 13px;
+                font-size: 12px;
             }
 
             .description-note {
-                font-size: 11px;
+                font-size: 10px;
             }
         }
 
@@ -582,20 +606,24 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .eem-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .eem-option-name {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .eem-option-savings {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             .description-title {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .description-note {
-                font-size: 10px;
+                font-size: 9px;
             }
         }
     </style>
@@ -709,27 +737,27 @@
                     note: ''
                 },
                 {
-                    title: 'High performance building envelope',
+                    title: 'EEM1 - High performance building envelope',
                     note: 'Window u-value of 0.38, solar heat gain coefficient (SHGC) of 0.23'
                 },
                 {
-                    title: 'High performance lighting system',
+                    title: 'EEM2 - High performance lighting system',
                     note: 'Building-level lighting power density (LPD) of 0.7 W/ft²'
                 },
                 {
-                    title: 'DV for patient room',
+                    title: 'EEM3 - DV for patient room',
                     note: 'Displacement ventilation for patient room'
                 },
                 {
-                    title: 'OR DOAS system',
+                    title: 'EEM4 - OR DOAS system',
                     note: 'Dedicated outdoor air unit + air handling unit for operating rooms'
                 },
                 {
-                    title: 'Heat recovery chiller or 4 pipe HR heat pumps',
+                    title: 'EEM5 - Heat recovery chiller or 4 pipe HR heat pumps',
                     note: '120 tons of HR chiller or 4 pipe HR heat pump'
                 },
                 {
-                    title: '2-pipe air source heat pump',
+                    title: 'EEM6 - 2-pipe air source heat pump',
                     note: 'Air source heat pump for space heating (full electrification)'
                 }
             ]
